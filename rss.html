@@ -1,0 +1,681 @@
+
+<?xml version="1.0" encoding="utf-8" standalone="no"?><?xml-stylesheet type='text/xsl' href='/rssxsl.xslt' version='1.0'?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>secretGeek.net</title>
+    <link>http://secretGeek.net/index.asp</link>
+    <description>secretGeek.net</description>
+    <copyright>Copyright 2019 Leon Bambrick</copyright>
+    <language>en-au</language>
+    <managingEditor>LeonBambrick@NoSpamGMAIL.com (Leon Bambrick)</managingEditor>
+    <webMaster>LeonBambrick@NoSpamGMAIL.com (Leon Bambrick)</webMaster>
+    <atom:link href="http://secretGeek.net/Rss" rel="self" type="application/rss+xml" />
+    <image>
+      <title>secretGeek</title>
+      <url>http://secretGeek.net/secretgeek2_noT.gif</url>
+      <link>http://secretGeek.net/index.asp</link>
+      <width>49</width>
+      <height>33</height>
+      <description>secretGeek</description>
+    </image>
+    <item>
+      <title>Desert Skies - exclusive inside information from the developers</title>
+      <link>http://www.secretGeek.net/desert_skies</link>
+      <description><![CDATA[<p>Unless you've been living under a rock like some disgusting sand-sneaking Seeker -- you're aware of the awesome sensation taking the gaming community by storm: <a href="https://store.steampowered.com/app/1048950/Desert_Skies/">Desert Skies</a>.</p>
+
+<p>Here's a video of the game play in case you're not familiar.</p>
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/2vYeqmpWGrg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+<p>I recently sat down for an intense lunch with one of the minds from <a href="https://www.white-rabbit-games.com/">White Rabbit Games</a> - the creative duo behind this Indy gaming sensation, and I found out some exclusive information.</p>
+
+<p>Although the company is called &quot;White Rabbit Games&quot; the logo is of a cat.</p>
+
+<p><img src='http://www.secretGeek.net/image/whiterabbitgameslogo.png' alt='white rabbit games logo... a white cat' title='white rabbit games logo... a white cat' style='background-color:#222;padding:10px;' /></p>
+
+<p>SEE!?</p>
+
+<p>What's that all about?</p>
+
+<p>T: we have a fluffy white cat, and it looks like a bunny so we call it &quot;bunny&quot;.</p>
+
+<p>Thus the white rabbit is actually a cat.</p>
+
+<p>Woah.</p>
+
+<p>That's enough revelations for one day.</p>
+
+<p>It's a really awesome game. I find it pretty exciting because it's a simple idea that is popular enough that it will get a chance to expand in some really interesting directions. <a href="https://store.steampowered.com/app/1048950/Desert_Skies/">Keep an eye on this</a>!</p>
+
+
+]]></description>
+      <pubDate>Sun, 06 Oct 2019 01: 23:38 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/desert_skies</guid>
+    </item>
+    <item>
+      <title>What is NimbleText (a story about cheese)</title>
+      <link>http://www.secretGeek.net/nimbletext_cheese</link>
+      <description><![CDATA[<p>A good friend asked me the other day, "Wait a second, what's nimble text?" and I stammered out an answer. I'm not good at elevator pitches. Waving my arms around didn't make it any clearer. I tried waving them in bigger circles and pointing as I talked. It still didn't help.</p>
+
+<p>I decided to email him an answer. It turns out I don't have his email address, so I'm writing it here, and I'll transmit the URL some other way. You get to read my reply in public.</p>
+
+<p>What then, is NimbleText?</p>
+
+<p>NimbleText is an adhoc code generator.</p>
+
+<p>For example, say you have a list of &quot;keywords&quot;, <em>(he's a digital advertising specialist... it takes all kinds)</em> and you want to do something with each keyword, maybe insert it into a database.</p>
+
+
+<p>Here's your list of keywords (these are French cheeses)</p>
+
+<blockquote><pre>Abondance
+Banon
+Beaufort
+Bleu
+Brie
+Brillat-Savarin
+Brocciu Cara or Brocciu
+Cabécou
+Cancoillotte
+Camembert de Normandie
+Chabichou du Poitou
+Chaource
+Chevrotin
+Comté</pre></blockquote>
+
+<p>...you paste that into NimbleText, and type in a pattern... how about this:</p>
+
+<blockquote><pre>Insert into Keywords(Keyword) Values ('$0')
+</pre></blockquote>
+
+<p>NimbleText will *magically* create this SQL query for you:</p>
+
+<blockquote><pre>Insert into Keywords(Keyword) Values ('Abondance')
+Insert into Keywords(Keyword) Values ('Banon')
+Insert into Keywords(Keyword) Values ('Beaufort')
+Insert into Keywords(Keyword) Values ('Bleu')
+Insert into Keywords(Keyword) Values ('Brie')
+Insert into Keywords(Keyword) Values ('Brillat-Savarin')
+Insert into Keywords(Keyword) Values ('Brocciu Cara or Brocciu')
+Insert into Keywords(Keyword) Values ('Cabécou')
+Insert into Keywords(Keyword) Values ('Cancoillotte')
+Insert into Keywords(Keyword) Values ('Camembert de Normandie')
+Insert into Keywords(Keyword) Values ('Chabichou du Poitou')
+Insert into Keywords(Keyword) Values ('Chaource')
+Insert into Keywords(Keyword) Values ('Chevrotin')
+Insert into Keywords(Keyword) Values ('Comté')
+</pre></blockquote>
+
+<p>Two seconds later, you run the SQL and insert all the keywords into the database.</p>
+
+<p>You can play with that example here: <a href="https://nimbletext.com/Live/398054487/">https://nimbletext.com/Live/398054487/</a></p>
+
+<p>If the input had more than one column, you would refer to the next column as <code>$1</code>, then <code>$2</code>, etc.</p>
+
+<p>So if the keyword data included, I don't know... some search traffic numbers?...</p>
+
+<blockquote><pre>Abondance,1000
+Banon,3000
+Beaufort,200
+Bleu,12
+Brie,6
+Brillat-Savarin,90
+</pre></blockquote>
+
+<p>We could use a pattern like this:</p>
+
+<blockquote><pre>Insert into KeywordResult (Keyword,Result) Values ('$0', $1)
+</pre></blockquote>
+
+<p>To generate this result:</p>
+
+<blockquote><pre>Insert into KeywordResult (Keyword,Result) Values ('Abondance', 1000)
+Insert into KeywordResult (Keyword,Result) Values ('Banon', 3000)
+Insert into KeywordResult (Keyword,Result) Values ('Beaufort', 200)
+Insert into KeywordResult (Keyword,Result) Values ('Bleu', 12)
+Insert into KeywordResult (Keyword,Result) Values ('Brie', 6)
+Insert into KeywordResult (Keyword,Result) Values ('Brillat-Savarin', 90)
+</pre></blockquote>
+
+<p>(See this example here: <a href="https://nimbletext.com/Live/284342338/">https://nimbletext.com/Live/284342338/</a>)</p>
+
+<p>But it's not just for generating SQL queries, it's for text in general; and it's not just for keywords and it's not even specific to cheeses. There are many non-cheese uses.</p>
+
+<p>It helps you anytime you want to rearrange some data and do something to every row, to generate a result.</p>
+
+<p>There's an <a href='https://nimbletext.com/Live/'>online version</a>, and a downloadable version (with <a href='https://nimbletext.com/Home/Professional'>extra features</a>). You can embed javascript inside your patterns to do really tricky formatting stuff. It's versatile.</p>
+
+<p>It's just this thing, you know. For stuff.</p>
+
+]]></description>
+      <pubDate>Tue, 16 Jul 2019 08: 56:12 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/nimbletext_cheese</guid>
+    </item>
+    <item>
+      <title>Secrets of Mastering Excel</title>
+      <link>http://www.secretGeek.net/excelsecrets</link>
+      <description><![CDATA[<p>Inspired by a <a href="https://news.ycombinator.com/item?id=20418313">comment thread at hacker news</a> I made this mini site:</p>
+
+<p><a href='https://excel.secretgeek.net/' class='action'>excel.secretgeek.net</a></p>
+
+<p>I often want to share Joel Spolsky's famous &quot;You Suck at Excel&quot; video tutorial with &quot;important&quot; business people inside the large enterprise where I spend a lot of time.</p>
+
+<p>But it would be easily misconstrued as trolling if I sent a business customer a URL that literally tells them, right in the heading, that they &quot;suck&quot; at excel.</p>
+
+<p>So, as advised by user <code>TuringTest</code> (in the thread mentioned above) I created a mini site, on its own sub-domain, that is palatable to a business mindset, and <em>brutally</em> overlaid a heading that says &quot;Secrets of Mastering Excel&quot; right over the top of the &quot;You Suck at Excel&quot; heading.</p>
+
+<p>Now I've got something I can recommend to business people without causing disharmony. And I can leave a link to it in my corporate email signature, to nudge others to improve their Excel game.</p>
+
+<p>Ideally the page would detect when the video starts and remove the label, so it doesn't obscure the video. Also, I'd like to write up a set of notes about the talk, but ain't nobody got time for that, so I've linked to the notes from Max Masnick. Perfect is the mortal enemy of done and they are locked in an ultimate death embrace and that is how storm clouds create lightning but I digress.</p>
+
+<p>The whole thing from idea to delivery was about an hour. I was really pleased with the speed on this one.</p>
+
+]]></description>
+      <pubDate>Sat, 13 Jul 2019 21: 12:11 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/excelsecrets</guid>
+    </item>
+    <item>
+      <title>The Market for Ideas (and is contenteditable really terrible?)</title>
+      <link>http://www.secretGeek.net/contenteditable_ideas</link>
+      <description><![CDATA[<p>Some people invest in gold, others bitcoin. I put my money on ideas. The volatility can be wild.</p>
+<p>Take this idea -- the idea that &quot;Contenteditable&quot; attribute is a terrible basis for a Wysiwyg editor, as expressed by <a href="https://medium.engineering/why-contenteditable-is-terrible-122d8a40e480">this article from medium engineering</a>.</p>
+<p>5 years ago, this idea was only worth 3 points and 1 comment.</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=7745425">Why ContentEditable is Terrible</a> 5 years ago - 3 points - 1 comment</li>
+</ul>
+<p><em>(I bought all I could! I liquidated all my other ideas so I could go long on this one....)</em></p>
+<p>One year later -- it's worth had grown to 75 points and 9 comments:</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=10652634">Why ContentEditable is Terrible</a> 4 years ago - 75 points - 9 comments</li>
+</ul>
+<p><em>(I was tempted to cash out... but some stubborn streak... I held my nerve)</em></p>
+<p>It hit its peak 3 years ago when its worth grew to 155 points and 76 comments</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=11487667">Why ContentEditable is Terrible</a> 3 years ago - 155 points - 76 comments</li>
+</ul>
+<p><em>(I sold it all, by god, I cashed it all in, right at the peak! It was glorious!)</em></p>
+<p>Soon after: the idea came crashing down. A year ago it was old news, back down to 3 points and 0 comments.</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=17041155">Why ContentEditable is Terrible</a> 1 year ago - 3 points - 0 comments</li>
+</ul>
+<p>I guess what I'm saying is... sometimes an idea is before it's time. Not enough people understand the fundamentals to be able to engage with the idea. Then the audience has caught up, and they understand the idea. And then, having grokked it, the idea doesn't captivate them any longer.</p>
+
+<p><em>A different though related thought is <a href='https://hackernoon.com/its-better-to-be-wrong-than-early-edabc60fce7f'>"It's better to be wrong than early"</a> as described at hackernoon</a>, a sentiment that occurs a few times in Ray Dalio's Principles.</em></p>
+
+<p><img src='http://www.secretGeek.net/image/contenteditable.png' alt='contenteditable' title="this is not a rigorous study" alt='results at hn.algolgia of searching for contenteditable is terrible' /> </p>
+
+<p>I don't really invest in ideas. Not explicitly. (<em>At a deep level, just about everything we do is an investment in an idea.</em>)</p>
+
+
+<p>p.s. I built something with <code>contenteditable</code> this week... I agree it's terrible. <a href='https://secretgeek.github.io/style_edit/style.html'>A page that lets you edit its style, without using javascript</a></p>
+]]></description>
+      <pubDate>Thu, 13 Jun 2019 09: 07:53 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/contenteditable_ideas</guid>
+    </item>
+    <item>
+      <title>a html quine</title>
+      <link>http://www.secretGeek.net/a_html_quine</link>
+      <description><![CDATA[<p>Yesterday I was on a bus! Yes, a bus! I don't get to ride buses so often due to the working from home lyfe, but I took the opportunity to write some simple code (as I used to do on buses in the past... i even gave <a href="http://www.secretgeek.net/code_commute">a talk about it once</a>, when alt.net was a thing.)</p>
+<p>And the thing I coded on the bus was a html quine.</p>
+<p><a href="https://secretgeek.github.io/html_wysiwyg/html.html" class="action sm">Go and see this html quine</a></p>
+<p>It's... different?</p>
+<p><a href="https://secretgeek.github.io/html_wysiwyg/html.html"><img src="http://www.secretGeek.net/image/html_quine.jpg" alt="html quine.jpg" /></a></p>
+<p>A quine is a program that produces, as output, its own source code. I've <a href="http://wiki.secretgeek.net/quine">discussed and demonstrated quines over here in the wiki</a>.</p>
+<p>And as I say in the html quine link, although the idea had bounced around in my head for a decade, the thing that reminded me to go and do it was seeing this piece of &quot;Code as Art&quot; from Geoff Huntley recently: <a href="https://noyaml.com/">no yaml</a>. There must be more Code as Art in this world.</p>
+
+<hr />
+
+<p>See also, lengthy <a href='https://news.ycombinator.com/item?id=20094866'>Hacker News discussion</a></p>
+
+]]></description>
+      <pubDate>Tue, 04 Jun 2019 19: 24:37 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/a_html_quine</guid>
+    </item>
+    <item>
+      <title>auto play</title>
+      <link>http://www.secretGeek.net/autoplay</link>
+      <description><![CDATA[<p>Even though I'm polite and I click yes to let all the websites keep their cookies on my machine, for their own devilish surveillance purposes, even though I say yes and there are no doubt a million cookies filled with details about me, knowing everything i like and what i click on, and invading every ounce of my privacy, it seems that they can't seem to find the one cookie that matters, they keep losing that one cookie i care about and it's the cookie that says: "Don't autoplay the fucking videos on youtube." Just don't do it. He's told us, over and over, on every device, not to autoplay those videos, just hold onto this one simple fact, this tiny binary digit of truth, and do not autoplay those videos. But that's the one cookie they cannot retain, they cannot keep hold of, it evades their grasp, it leaps out of their fingers like an oily fish cookie, a digusting cookie flavour that is not very popular when A/B tested in regular stores, it is the slipperiest cookie and i click once more to say "again, i tell you, please i beg you, do not autoplay your videos" and once more I know they will forget this fact as they have a specific form of memory loss, a Korsakoff syndrome all their own, where all private thoughts of an individual are retained indefinitely and sold to the highest bidder but one particular bit of data is unlike any other and is somehow coated in polytetrafluoroethene and cannot be persisted in any form, it is like those burn after reading messages that will self destruct as soon as they are read and so i am stuck endlessly watching one autoplayed video after another down stranger and stranger wormholes down rabbit rabbit holes in weird enclaves of digital degeneration as i see things unthinkable things things i cannot unsee and always i squirm and wish to escape but it cannot be done i must keep watching them play and play the playing must be played they cannot pause their playing, the playing must play, like clockwork orange i am bound before the screen with eyeballs clamped open by spidery metal fingers and please keep your cookie no more autoplay for me i cannot resist.</p>
+
+<p>&nbsp;</p>
+
+
+]]></description>
+      <pubDate>Sun, 02 Jun 2019 21: 35:21 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/autoplay</guid>
+    </item>
+    <item>
+      <title>TimeSnapper for Mac: Beta Testers Needed</title>
+      <link>http://www.secretGeek.net/ts_mac_beta</link>
+      <description><![CDATA[<p><img src="http://www.secretGeek.net/image/timesnappericon.png" alt="TimeSnapper Logo" style="float:right"/> Finally some exciting news on the TimeSnapper front.</p>
+
+<p>For a long time, the most requested feature for TimeSnapper has been a whole new version, for the Mac OS. Many of our customers and friends have moved from Windows to Mac over the last decade, and consistently told us that they miss the peace of mind and assistance that TimeSnapper provides.</p>
+
+<p>One such customer, <a href="https://blog.jonschneider.com/">Jon Schneider</a> was so tired of the situation that he built a new version of TimeSnapper, from the ground up, for the Mac OS. He is now part of the TimeSnapper team (along with Atli and I) and we're now ready -- with your help -- to welcome beta testers: people who are willing to run this software and give us feedback, suggestions and error reports about their experience.</p>
+
+
+
+<p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJZriteOlxS1qJMPubKt2wQp6CV6_60vOs3UTZjBTnawzLWQ/viewform?embedded=true" width="640" height="680" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></p>
+	
+
+<p>A quick recap: <a href="http://TimeSnapper.com">TimeSnapper</a> is a piece of software you can run in the background of your computer. It takes screenshots of your desktop every few seconds all week long. You can use it to recover text you've lost when (for example) your browser crashes, or you can use it to help fill out a timesheet, or just to gain an objective answer to the question &quot;Where did my time go?&quot; It's clever about the way it uses resources, so it doesn't fill up your hard drive or slow your computer.</p>
+
+<p>Huge thanks to you for considering coming along on this journey, and a biiiiiiiiiig thank you to Jon for stepping up and getting us here.</p>    
+
+<p><img src='http://www.secretGeek.net/image/ts_mac_options_50.png' alt='ts mac options' title='ts mac options' /></p>
+
+<p><img src='http://www.secretGeek.net/image/ts_mac_playback_50.png' alt='ts mac playback' title='ts mac playback' /></p>]]></description>
+      <pubDate>Mon, 08 Apr 2019 10: 02:43 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/ts_mac_beta</guid>
+    </item>
+    <item>
+      <title>React is NOT ok</title>
+      <link>http://www.secretGeek.net/react_not_ok</link>
+      <description><![CDATA[<p>Look how tragic this is....</p>
+<p>You create your new react app with:</p>
+<blockquote><pre>npx create-react-app my-app
+</pre></blockquote>
+<p>And it spits out 907 lines of techno-babblicious output, scrolling scrolling scrolling in your console, ending at last with exactly one useful shard of information:</p>
+<blockquote><pre>Success! Created my-app at C:\example\my-app
+Inside that directory, you can run several commands:
+
+	yarn start
+		Starts the development server.
+
+	yarn build
+		Bundles the app into static files for production.
+
+	yarn test
+		Starts the test runner.
+
+	yarn eject
+		Removes this tool and copies build dependencies, configuration files
+		and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+	cd my-app
+	yarn start
+
+Happy hacking!
+</pre></blockquote>
+<p>But after the wall of gobbledygook that preceded it, it's easily overlooked.</p>
+<p>If the React team knew about the wonders of &quot;ok&quot; (for <a href="https://github.com/secretGeek/ok-bash">bash</a> or <a href="https://github.com/secretGeek/ok-ps">powershell</a>) they'd simply create a &quot;.ok&quot; file inside the &quot;my-app&quot; folder that says:</p>
+<blockquote><pre>yarn start #   Starts the development server.
+yarn build #   Bundles the app into static files for production.
+yarn test  #   Starts the test runner.
+</pre></blockquote>
+<p>...Then you'd immediately be able to find the commands again, <strong>and run them</strong> with a simple &quot;<code>ok 1</code>&quot;, or &quot;<code>ok 2</code>&quot; or &quot;<code>ok 3</code>&quot;</p>
+<p>But instead: those commands, sailing by in the infinite neon-scroll of the console, will be lost in time like tears in rain.</p>
+<p><img src="http://www.secretGeek.net/image/tears_in_the_rain.gif" alt="blade runner ending, tears in rain" /></p>
+
+]]></description>
+      <pubDate>Thu, 14 Mar 2019 02: 22:11 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/react_not_ok</guid>
+    </item>
+    <item>
+      <title>Using "ok" as a Project Control Room</title>
+      <link>http://www.secretGeek.net/jevok</link>
+      <description><![CDATA[<p>Here's an example of the scrappy, useful sort of way I use an <a href="http://www.secretgeek.net/ok"><code>ok</code> folder profile</a> to help me get things done.</p>
+<p>I'm co-writing a book with <a href="https://jcooney.net/">Joseph Cooney</a>. When I want to work on the book I navigate into the correct folder, using this command:</p>
+<blockquote><pre><code>j ev
+</code></pre></blockquote>
+<p><code>j</code> is an alias for <code>jump</code> which is part of my <a href="https://github.com/secretGeek/markjump"><code>markjump.ps1</code></a> system for navigating around. &quot;ev&quot; is the first two letters of the bookmark i've got for this location, so <a href="https://github.com/secretGeek/markjump">markjump</a> &quot;jumps&quot; me into the <code>~\evergreenskillsdotcom</code> folder.</p>
+<p>Inside that folder, if I type &quot;<code>ok</code>&quot; I see a list of all the actions that are easy to run.</p>
+<p><img src="http://www.secretGeek.net/image/ok_evergreen.png" alt="ok evergreen" /></p>
+<p>As shown in the screenshot the options I get are:</p>
+<blockquote>
+<ol>
+<li>clowncar # use clowncar to generate static html<br /></li>
+<li>.\build_and_push.ps1<br /></li>
+<li>browse &quot;https://docs.google.com/document/d/************************/edit&quot;      # view DA BOOOK<br /></li>
+<li>browse &quot;https://docs.google.com/spreadsheets/d/************************/edit&quot;  # subscribers<br /></li>
+<li>j journal; code .\nontechnicals.md; popd; # work on non-technicals<br /></li>
+<li>browse &quot;https://webmail.************************&quot; # ****** inbox leon@evergreenskills.com<br /></li>
+<li>browse &quot;https://trello.com/b/********/evergreen&quot;    # Joseph's Trello for EV<br /></li>
+<li>browse &quot;https://www.reddit.com/r/EvergreenSkills/&quot;	# REDDIT for ev<br /></li>
+</ol>
+</blockquote>
+<p>This rag-tag bunch of commands acts as a kind of &quot;control room&quot; for all the different work-fronts of the book.</p>
+<p><img src="http://www.secretGeek.net/image/control_center_50.jpg" alt="control center" /></p>
+<p>I can re-generate the <a href="https://evergreenskills.com">website</a> by calling <code>ok 1</code> (this uses a static html generator i wrote in powershell called clowncar, which uses <a href="https://github.com/secretGeek/pre"><code>pre</code></a>, markdown and yaml)</p>
+<p>I can rebuild and push <a href="https://evergreenskills.com">the site</a> live with <code>ok 2</code></p>
+<p>I can continue to edit or write the book itself with <code>ok 3</code></p>
+<p>I can see the list of people who have subscribed to be notified at <code>ok 4</code></p>
+<p>There's a bunch of research notes about non-technical skills I can edit at <code>ok 5</code></p>
+<p>I can send or receive email from the evergreenskills domain with <code>ok 6</code></p>
+<p>Joseph has a trello board where we share a lot of notes and ideas at <code>ok 7</code></p>
+<p>And there's a reddit site where we've been sharing links, at <code>ok 8</code></p>
+<p>(I've hidden a few guids, to try and slow the doomsday clock on the <a href="https://github.com/secretGeek/AwesomeGUID">guid apocalypse</a>)</p>
+<p>Even a simple project like this one has an evolving set of different urls and commands and activities. Maintaining a little <code>.ok</code> file is the simplest way I've got to keep track of them.</p>
+<p>Unlike a documentation site it contains &quot;executable&quot; commands. And since I use powershell for all navigation and automatically run <code>ok</code> everytime I enter a folder, it's always in front of my eyes, and doesn't &quot;rot&quot; the way documentation does.</p>
+
+<p>(Image is from <a href='https://waxworkrecords.com/products/pilotpriest'>Pilotpriest ‎– Original Motion Picture Soundtrack</a>... I've always loved that image since I saw it on <a href='http://archillect.com/'>archillect</a>)</p>
+]]></description>
+      <pubDate>Fri, 08 Mar 2019 07: 24:32 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/jevok</guid>
+    </item>
+    <item>
+      <title>Meetings: Are They Worth It?</title>
+      <link>http://www.secretGeek.net/MeetingCosts</link>
+      <description><![CDATA[<p>I tweeted recently that, inside a corporation, it would be handy to have, for example...</p>
+<p>An Outlook plugin that automatically edits <em>every</em> meeting request, and appends a few characters to the title:</p>
+<p>If the meeting request was for 10 people, for 120 minutes, it would calculate &quot;10 people times 2 hours times (some reasonable rate per hour, e.g. $89)&quot; and then it would append &quot;for $1780&quot; to the time of the meeting hence:</p>
+<blockquote>
+<p>Project Kick Off</p>
+</blockquote>
+<p>would become:</p>
+<blockquote>
+<p>Project Kick Off for $1780!</p>
+</blockquote>
+<p>(The exclamation would only be added if the dollar amount was above some configuration value.)</p>
+<p>Or better yet:</p>
+<blockquote>
+<p>Project Kick Off for $1780, so make sure it's worth it!</p>
+</blockquote>
+
+<p><img src='http://www.secretGeek.net/image/jc_meetings.png' alt='John Cleese: Meetings, Bloody Meetings.' title='John Cleese: Meetings, Bloody Meetings.' /> </p>
+
+<p>And, although it was not an original idea, I saw a few people in agreement.</p>
+<p>In the past I've seen some &quot;passive-aggressive&quot; tools that perform a similar calculation, giving attendees a calculator to continuously measure their mounting frustration: but I think my idea is more straight-forward &quot;aggressive-aggressive&quot;.</p>
+<p>Initially it would be hampered by people feeling defensive, but once the underlying truth has been internalized people can (I believe) move forward and be both: less wasteful and more productive.</p>
+<p>As always, I reserve the right to change my mind in the morning.</p>
+]]></description>
+      <pubDate>Fri, 22 Feb 2019 09: 08:47 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/MeetingCosts</guid>
+    </item>
+    <item>
+      <title>The Visitor Effect</title>
+      <link>http://www.secretGeek.net/visitor_effect</link>
+      <description><![CDATA[<p>This is an amazing, remarkable and wonderful effect we have been using at work to achieve things all by ourselves that we couldn't achieve in five lifetimes if we had to achieve things all by ourselves. If that sounds confusing, it is.</p>
+
+<p>The visitor effect is a little like &quot;rubber duck debugging&quot;.</p>
+
+<p><img src="http://www.secretGeek.net/image/spray_n_wipe.jpg" alt="spray n wipe.jpg" /></p>
+
+<p>We've noticed at work that there are some corners in our code or some processes, that only one person is fully &quot;across&quot;. One person wrote it, maintains it, and takes care of it. No one else ever needs to worry about it and frankly, no one else would want to. These are bad things because the &quot;lottery count&quot; is 1.</p>
+
+<p>The &quot;lottery count&quot; is exactly like the &quot;under the bus&quot; count, but not quite as grim; I'll describe the latter, then the former. The &quot;under the bus&quot; count on a project asks &quot;how many people would need to be hit by a bus, before all crucial project knowledge would be lost?&quot; and is often phrased like this: &quot;But what if Rupert<sup>*</sup> is hit by a bus!?&quot; to which Ingrid responds, &quot;Then you can be certain I'll need an alibi.&quot; Because all this casual discussion of death and mayhem is a bit distasteful, particularly for Rupert, it's better to say &quot;But what if Rupert wins the lottery and doesn't come back to work on Monday?&quot; The lottery count, then, is a more generalizable mathematical treatise, resembling a knapsack problem that ponders, which minimal spanning subsets of workers are barred from forming lottery syndicates to avoid major risk to the project? But I digress.</p>
+
+<p>The visitor effect proceeds like this:</p>
+
+<p>&quot;Hmm, Rupert is the only person who understands the SCLABE System. We'd better ask for someone else to work on it with him.&quot;</p>
+
+<p>Ingrid volunteers. But we give Rupert some time to prepare. &quot;In three weeks time, Ingrid will look after the SCLABE System for a few days.&quot; Rupert experiences a brief panic then launches into a flurry of activity, tidying up and improving the system in anticipation of Ingrid's scornful gaze. Rupert looks at his code with fresh eyes. &quot;What is this doing here? Why is this so broken? How come this thing is still scattered over seven classes? Why is this coupled to that? What's with these warnings? Why is that test commented out? Why isn't that TODO: done?&quot; and so on.</p>
+
+<p>Two weeks later Ingrid finds she hasn't got time to take over from the SCLABE System. But already it's running at 300% efficiency over its old performance.</p>
+<p>This is the visitor effect.</p>
+
+<p><strong>*</strong> Rupert, Ingrid, and SCLABE are characters introduced by Simon Harriyott in <a href="https://www.harriyott.com/2006/03/what-rupert-cant-leave-hes-only-one">What?! Rupert can't leave! He's the only one who knows the SCLABE system!</a>. Simon's disclaimer, which applies equally well here reads: &quot;SCLABE is a fictional legacy system written in COBOL on an AS/400. Rupert is a fictional developer, whose resemblance to anyone you know is the whole point of this exercise.&quot;</p>
+]]></description>
+      <pubDate>Tue, 08 Jan 2019 07: 32:32 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/visitor_effect</guid>
+    </item>
+    <item>
+      <title>2018 By The Numbers</title>
+      <link>http://www.secretGeek.net/2018_Review</link>
+      <description><![CDATA[<p>Being productive in 2018 was again a challenge. If you produced nothing, but managed to survive: good for you!</p>
+<p>Here's a summary of things I shipped. Numbers in parens, e.g. &quot;(3,2)&quot;, are the figures from last year and the year before.</p>
+
+
+<p><a href='https://www.instagram.com/secretgeek/'><img src='http://www.secretGeek.net/image/insta_2018_55.jpg' alt='instagram/secretgeek 2018' title='instagram/secretgeek 2018' /> </a></p>
+
+<ul>
+<li>1 book published, <a href="https://YourFirstProduct.com">Choose Your First Product</a> (1,0) (available as a <a href="https://payhip.com/b/GDBz">PDF</a>, <a href="https://payhip.com/b/h80s">Epub</a>, a <a href="https://www.amazon.com/exec/obidos/ASIN/B07DC9HLYV/secretGeek-20">kindle book</a>, a <a href="https://www.amazon.com/exec/obidos/ASIN/1987475356/secretGeek-20">physical book</a>, and at the <a href="https://www.kobo.com/au/en/ebook/choose-your-first-product">kobo store</a>)</li>
+<li>1 <a href="http://nimbletext.com/Version/Notes#2.9.1.36018">new version of NimbleText</a> released (1,3)</li>
+<li>10 <a href="http://secretgeek.net/Archive/2018">Blog posts written</a> (13, 17)</li>
+<li>14 new <a href="http://wiki.secretgeek.net/Article">wiki articles</a> completed (10,50)</li>
+<li>19 Weekly Project Update emails shared with Richard Mason of <a href="https://www.aussiebushwalking.com/">Aussie Bushwalking</a> (0)</li>
+<li>Modest amount of work completed on <a href="https://evergreenskills.com/">Evergreen Skills for Software Developers</a> but much kudos to <a href="https://jcooney.net/">Joseph Cooney</a> who worked very hard on this forthcoming book.</li>
+<li>Big shout out to <a href="http://blog.zanstra.com/">Doeke Zanstra</a> (<a href="https://twitter.com/doekezanstra">see also</a>) for his excellent work on <a href="https://github.com/secretGeek/ok-bash">ok-bash</a>.</li>
+<li>1 project I forgot to tell you about: <a href="https://github.com/secretGeek/robots-versus-electric-sheep/blob/master/README.md">Robots versus Electric Sheep</a></li>
+<li>~200 pictures at <a href="https://www.instagram.com/secretgeek/">insta/secretGeek</a></li>
+<li>73 <a href="https://til.secretgeek.net/">Today-I-Learned</a> Entries written (133, 233) — 117163 words (35289, 42352), 10 new topics (21, 44)</li>
+<li>156 contributions at <a href="https://github.com/secretGeek/">Github/secretGeek</a> (189, 292)</li>
+<li>2 new <a href="https://yourfirstproduct.com/Info">articles</a> written for &quot;Your First Product&quot; (6,17)</li>
+<li>1 blog post published to <a href="https://medium.com/@secretGeek">medium</a> (2, 0)</li>
+<li>0 talks delivered (1,1) phew.</li>
+<li>2 (really minor) pull requests successfully submitted to open source software (1,3)</li>
+<li>1 pair of driving glasses acquired (0,0)</li>
+<li>2 production websites moved from Windows to Linux (2,3)</li>
+<li>200+ days in a row I met my <a href="http://secretgeek.net/goals_streak">daily step goal</a> (previous best streak 117, also this year, prior years' best was 73 days. At this point i just use it to track the duration between sickness/injury.)</li>
+<li>1000s of <a href="https://twitter.com/secretGeek">tweets</a> screamed into the void.</li>
+</ul>
+<p>The tweets that travelled the furthest were both about <a href="https://evergreenskills.com/">Evergreen Skills</a></p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">You want to stay relevant for the next 10 years?<br><br>These are 3 major things you should focus on:<br><br>- the binary language of moisture vaporators<br>- going into Tosche Station to pick up some power converters<br>- traveling through hyperspace which ain&#39;t like dusting crops, farm boy <a href="https://t.co/8Y5aXq6eGY">https://t.co/8Y5aXq6eGY</a></p>&mdash; Leon Bambrick (@secretGeek) <a href="https://twitter.com/secretGeek/status/1064400162288623616?ref_src=twsrc%5Etfw">November 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Imagine two teams are competing to see who can build the tallest skyscraper. The second team can use any material they want. The first team gets a 20 year headstart but can only use bananas. How long does team 2 take to catch up? (Teams are called javascript and webassembly)</p>&mdash; Leon Bambrick (@secretGeek) <a href="https://twitter.com/secretGeek/status/1068626722449309696?ref_src=twsrc%5Etfw">November 30, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Well, let's see what 2019 is all about.</p>
+<p><a href="http://secretgeek.net/2017_review">Previously</a> <a href="http://secretgeek.net/2016_review">previously</a></p>
+
+]]></description>
+      <pubDate>Thu, 03 Jan 2019 05: 29:20 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/2018_Review</guid>
+    </item>
+    <item>
+      <title>Think you're clever? Can you name each of these CASING styles?</title>
+      <link>http://www.secretGeek.net/capital</link>
+      <description><![CDATA[<p>How many of these capitilization styles can you name?</p>
+<p>I'll give you a clue, the first one is &quot;UPPERCASE&quot;</p>
+<ol>
+<li>ALL WORK AND NO PLAY MAKES HOMER SOMETHING SOMETHING</li>
+<li>all work and no play makes homer something something</li>
+<li>All Work And No Play Makes Homer Something Something</li>
+<li>AllWorkAndNoPlayMakesHomerSomethingSomething</li>
+<li>allWorkAndNoPlayMakesHomerSomethingSomething</li>
+<li>All work and no play makes homer something something</li>
+<li>all_work_and_no_play_makes_homer_something_something</li>
+<li>ALL_WORK_AND_NO_PLAY_MAKES_HOMER_SOMETHING_SOMETHING</li>
+<li>all-work-and-no-play-makes-homer-something-something</li>
+<li>All-Work-And-No-Play-Makes-Homer-Something-Something</li>
+<li>All wOrk And nO plAy mAkEs hOmEr sOmEthIng sOmEthIng</li>
+<li>alL woRk AnD No plAy MAkeS HOMer sOMetHInG sOmetHING</li>
+</ol>
+<p>Take your time. Look through them carefully. One at a time, out loud, say what each of them is called.</p>
+<p>Scroll down for the answers.</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>scroll...</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>scroll...</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>scroll...</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>scroll...</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>scroll...</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2 id="the-answers">The Answers</h2>
+<p>Easy one first up:</p>
+<blockquote>
+<p>1. ALL WORK AND NO PLAY MAKES HOMER SOMETHING SOMETHING</p>
+</blockquote>
+<p>That's uppercase. Letters A-Z.</p>
+<blockquote>
+<p>2. all work and no play makes homer something something</p>
+</blockquote>
+<p>...lowercase, letters a-z.</p>
+<blockquote>
+<p>3. All Work And No Play Makes Homer Something Something</p>
+</blockquote>
+<p>...Title Case, the first letter of each word is capitalized.<sup>*</sup></p>
+<blockquote>
+<p>4. AllWorkAndNoPlayMakesHomerSomethingSomething</p>
+</blockquote>
+<p>Good old PascalCase... words are smashed together, with the first word capitalized.</p>
+<blockquote>
+<p>5. allWorkAndNoPlayMakesHomerSomethingSomething</p>
+</blockquote>
+<p>PascalCase's close relative, camelCase... words are smashed together, with the first word not-capitalized.</p>
+<blockquote>
+<p>6. All work and no play makes homer something something</p>
+</blockquote>
+<p>Sentence case... all words lowercase, but the first letter capitalized.</p>
+<blockquote>
+<p>7. all_work_and_no_play_makes_homer_something_something</p>
+</blockquote>
+<p>Snake case: underscores as word separators.</p>
+
+<blockquote>
+<p>8. ALL_WORK_AND_NO_PLAY_MAKES_HOMER_SOMETHING_SOMETHING</p>
+</blockquote>
+
+<p>Combine snake_case with UPPERCASE and you get C_CONSTANT_CASE.</p>
+<blockquote>
+<p>9. all-work-and-no-play-makes-homer-something-something</p>
+</blockquote>
+<p>This is kebab-case, great for URL fragments, it's lowercase with each word separated by a hyphen.</p>
+
+<blockquote>
+<p>10. All-Work-And-No-Play-Makes-Homer-Something-Something</p>
+</blockquote>
+<p>This is Train-Case, the slightly shouty cousin of kebab-case.</p>
+
+<blockquote>
+<p>11. All wOrk And nO plAy mAkEs hOmEr sOmEthIng sOmEthIng</p>
+</blockquote>
+<p>You might have to pay attention to spot that this is vOwEl cAsE - where vowels are sent to UPPERCASE.</p>
+<blockquote>
+<p>12. alL woRk AnD No plAy MAkeS HOMer sOMetHInG sOmetHING</p>
+</blockquote>
+<p>And this is an exmple of Sponge Bob Case, where letters are randomly assigned a case; it's different every time, and hard to detect. You can't disprove that every one of the above examples is ALSO an example of Sponge Bob case. That's the thing about random ;-)</p>
+<p>Here's a <a href="https://nimbletext.com/Live/-1925724103/">NimbleText pattern that demonstrates all of the above</a>.</p>
+<p>Yeh, this fun and educational content is also a promo for <a href="https://NimbleText.com">NimbleText</a>...</p>
+<p><a href="https://nimbletext.com/Live/2097452382/">This example lets you play with all the different casing styles and generate your own in a snap!</a></p>
+<p>Thanks to <strong>Doeke Zanstra</strong> for the idea of <a href='http://blog.zanstra.com/2018/07/08/Vowel-case.html'>vOwEl cAsE</a>.</p>
+<hr />
+<p><strong>*</strong> For a more nuanced take on Title Case (for professional writers) try the <a href="https://titlecaseconverter.com/">title case converter</a> tool, which can apply complex house styles, like Chicago, APA.</p>
+
+]]></description>
+      <pubDate>Tue, 27 Nov 2018 07: 18:49 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/capital</guid>
+    </item>
+    <item>
+      <title>NimbleText is now a Machine Learning Platform</title>
+      <link>http://www.secretGeek.net/ntml</link>
+      <description><![CDATA[<p>(TL/DR <a href='https://NimbleText.com'>NimbleText 2.9</a> is available now. It can *infer* a pattern from a single example.)</p>
+<p>I saw this image on twitter a few weeks ago, and it got me thinking...</p>
+<p><img src="http://www.secretGeek.net/image/machine_learning_66.jpg" alt="machine learning 66.jpg" style='border-radius:3px;box-shadow:0 3px 3px #CCC' /></p>
+<p>The first part of the diagram is a perfect description of <a href='https://NimbleText.com/live'>NimbleText</a>: given some <strong>data</strong> and a <strong>pattern</strong> (the 'rules') it produces an <strong>answer</strong>.</p>
+<p>I started to wonder:</p>
+<p><img src="http://www.secretGeek.net/image/hmmm.png" alt="hmmm" /></p>
+<p><em>How hard could it be to turn it around? Could I make it act like the second part of the diagram?</em>... given some data and a single example of an answer, can I make it produce the rules (the <em>pattern</em>) to produces this answer?</p>
+<p>Soon after, I had a satisfactory result and <a href='https://NimbleText.com/live'>NimbleText</a> can now act like the second part of the diagram.</p>
+<p>Here's an animated movie of it in action:</p>
+<p><a href='https://nimbletext.com/Live/147791866/'><img src='http://www.secretGeek.net/image/infer.gif' alt='Pattern inference in action' title='Pattern inference in action' /></a></p>
+<p>If you leave the &quot;pattern&quot; textbox blank, but insert an example result in the result textbox and hit &quot;calculate&quot; it will <em>deduce</em> the pattern.</p>
+<p>In other words, you can use an <em>example</em> to deduce the required pattern.</p>
+<p>For example, if you have this data:</p>
+<blockquote><pre>Jones,Jenny
+Smith,Sam
+Johnson,Jack
+</pre></blockquote>
+<p>...and you don't have a pattern, but you know the result you want, just enter an example result based on the first row, for example:</p>
+<blockquote><pre>Hello there Jenny Jones 
+</pre></blockquote>
+<p>Hit <code>Calculate</code> and the miracle of &ldquo;machine learning&rdquo; will use your example result to deduce a pattern:</p>
+<blockquote><pre>Hello there $1 $0
+</pre></blockquote>
+<p>Hit <code>Calculate</code> again the result will become:</p>
+<blockquote><pre>Hello there Jenny Jones
+Hello there Sam Smith
+Hello there Jack Johnson
+</pre></blockquote>
+<p>It's cleverer than that though. NimbleText also deduces any functions that are needed.</p>
+<p>If you had the data above, with an empty pattern, and the example result you provided was:</p>
+<blockquote><pre>jenny JONES
+</pre></blockquote>
+<p>Press <code>Calculate</code> and it will use your example to deduce <em>THIS</em> slightly more delightful pattern:</p>
+<blockquote><pre>&lt;% $1.toLowerCase() %&gt; &lt;% $0.toUpperCase() %&gt;
+</pre></blockquote>
+<p>Press <code>Calculate</code> again, and the new pattern will be applied, giving you the result:</p>
+<blockquote><pre>jenny JONES
+sam SMITH
+jack JOHNSON
+</pre></blockquote>
+<p>...without you ever having to waste your <a href="https://keysleft.com/">finger's precious few remaining keystrokes</a> typing out (or remembering) all those nasty function names. It can deduce quite a few other functions as well.</p>
+
+<p><a href='https://nimbletext.com/Live/147791866/' class='action sm' >Try it for yourself!</a></p>
+
+<p>Let me know about any bugs via a comment, or via email to support at nimbletext.com. cheers!</p>
+
+<hr />
+<p>(It's probably worth pointing out that any "machine learning" occuring here is just "classical programming"... it's a very handy feature all the same!)</p>
+]]></description>
+      <pubDate>Tue, 13 Nov 2018 07: 42:02 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/ntml</guid>
+    </item>
+    <item>
+      <title>I have some feedback for you...</title>
+      <link>http://www.secretGeek.net/feedback_thanks</link>
+      <description><![CDATA[<p>I read this excellent thread from <a href="https://twitter.com/amandaksilver">Amanda Silver</a> about &quot;feedback&quot;:</p>
+
+<p><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">But the truth is that a lot of the hard problems in software development are people problems. So, I’m going to share a few tips I’ve learned about collaboration over the past couple of decades...</p>&mdash; Amanda Silver (@amandaksilver) <a href="https://twitter.com/amandaksilver/status/1052404828494864384?ref_src=twsrc%5Etfw">October 17, 2018</a></blockquote></p>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>...and it reminded me to blog about what I learned from the book <a href="http://amazon.com/exec/obidos/ASIN/0670014664/secretGeek-20">&quot;Thanks for the Feedback&quot;</a> by the authors of &quot;Difficult conversations&quot; (Douglas Stone and Sheila Heen).</p>
+<p>There is a lot of depth to this book. I want to share the first major insight they provide:</p>
+<p>When someone says &quot;I'd like some feedback&quot; there are several different things they might mean.</p>
+<p>They might mean:</p>
+<ol>
+<li>&quot;I'd like appreciation and encouragement,&quot; or</li>
+<li>&quot;I'd like coaching/training from an expert,&quot; or</li>
+<li>&quot;I'd like to be evaluated.&quot;</li>
+</ol>
+<p>And, if someone says &quot;I have some feedback for you&quot; they might mean to provide any one of those three distinct things. That feeling, by the way, is the blood draining from your face. And it's in part because you're not sure what sort of feedback they're about to hit you with.</p>
+<p>If my daughter has just played trumpet in front of 300 people and she says &quot;How did I go?&quot; it's not the time for coaching or evaluating: it's good old appreciation and encouragement. This applies even <em>if</em>, in addition to being a mum or dad, you are a world class trumpet player.</p>
+<p>When you've applied for a job and you've heard nothing, you write and ask for feedback. You might be chasing type 3: &quot;Did I get the job?&quot; If they respond with &quot;Your choice of shirt was excellent,&quot; (a weak type 1), you're not completely satisfied.</p>
+<p>Other times, it's less clear.</p>
+<p>So before replying with feedback, the magic trick is to <strong>ask the person what sort of feedback they want</strong>.</p>
+<p>And if requesting feedback, <strong>be specific about the type of feedback you'd like to receive</strong>. (And then try to accept whatever you get!)</p>
+<p>As I said, the book goes a lot further. It digs deep into the psychology of feedback, the overlap between different types, the way different people respond to different stimuli (&quot;baseline&quot;, &quot;swing&quot;, &quot;sustain&quot;, &quot;recovery,&quot; oh my!) and much more. Feedback is a crucial part of life in civilization.</p>
+<p>I found it a worthy book.</p>
+
+]]></description>
+      <pubDate>Wed, 17 Oct 2018 02: 00:00 GMT</pubDate>
+      <dc:creator>Leon Bambrick</dc:creator>
+      <guid>http://www.secretGeek.net/feedback_thanks</guid>
+    </item>
+  </channel>
+</rss>
